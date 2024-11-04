@@ -1,0 +1,41 @@
+{% extends 'main\layoute.html' %}
+
+{% block title %}
+    <title>{{ page_title }}</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="container text-center my-5 p-4 bg-light rounded shadow">
+    <h1 class="display-4 text-primary">Добро пожаловать на сайт о ChatGPT!</h1>
+    <p class="lead text-secondary">Привет! Меня зовут {{ name }} , и я здесь, чтобы поделиться своим опытом, идеями и открытиями о мире ChatGPT.</p>
+
+    <div class="row text-start mt-5">
+        <div class="col-md-6 mx-auto">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                    <h2 class="card-title text-info">Чем интересен ChatGPT?</h2>
+                    <p class="card-text">ChatGPT — это искусственный интеллект, созданный для общения, помощи и творчества. От вопросов на любые темы до написания статей — возможности по-настоящему удивляют. Мне стало интересно понять, как это работает и что можно открыть, используя его каждый день.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mx-auto mt-4 mt-md-0">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                    <h2 class="card-title text-info">Что вы найдете на этом сайте</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item border-0"><strong>Как работает ChatGPT:</strong> Личное объяснение и примеры взаимодействия.</li>
+                        <li class="list-group-item border-0"><strong>Мой опыт:</strong> Заметки и истории о том, как ChatGPT помогает в повседневных задачах.</li>
+                        <li class="list-group-item border-0"><strong>Вопросы и контакты:</strong> Возможность задать мне вопросы и получить ответ на самые популярные из них.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="{% url 'how_it_works' %}" class="btn btn-primary btn-lg mt-4 shadow">Узнать больше</a>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,68 @@
+
+{% extends 'main\layoute.html' %}
+
+{% block title %}
+    <title>{{ page_title }}</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="container my-5">
+    <h1 class="display-5 text-center mb-4">Вопросы и Контакты</h1>
+    <p class="text-center lead">Свяжитесь со мной или задайте вопрос по теме ChatGPT! Я всегда рад делиться знаниями и помогать.</p>
+
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <h3>Часто задаваемые вопросы</h3>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeading1">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                            Как ChatGPT помогает в повседневной жизни?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            ChatGPT может помочь в различных задачах — от написания текстов и ответов на вопросы до создания креативных идей и поиска информации.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeading2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                            Могу ли я использовать ChatGPT бесплатно?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Да, есть бесплатные варианты использования ChatGPT. Однако также доступны платные версии с расширенными функциями и возможностями.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeading3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                            Чем ChatGPT отличается от других чат-ботов?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            ChatGPT разработан на основе передовой модели искусственного интеллекта от OpenAI и обучен на обширном объёме текстов, что позволяет ему отвечать на вопросы более точно и творчески.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 text-center">
+            <h3>Связаться со мной</h3>
+            <p>Для связи со мной, нажмите на электронный адрес ниже:</p>
+            <a href="mailto:mail@hodzha.com" class="btn btn-primary">
+                <i class="fas fa-envelope"></i> mail@hodzha.com
+            </a>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
