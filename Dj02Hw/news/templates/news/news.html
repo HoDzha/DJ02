@@ -1,0 +1,20 @@
+{% extends 'main\layoute.html' %}
+
+{% block title %}
+    <title>{{ page_title }}</title>
+{% endblock %}
+
+{% block content %}
+<h1>{{ page_title }}</h1>
+
+{% for item in news %}
+<div>
+    <h2>{{ item.title }}</h2>
+    <p>Пользователь: {{ user.username }}</p>
+    <p>{{ item.short_description }}</p>
+    <p>{{ item.text }}</p>
+    <p>{{ item.pub_date }}</p>
+</div>
+{% endfor %}
+
+{% endblock %}
