@@ -10,7 +10,7 @@
 {% for item in news %}
 <div>
     <h2>{{ item.title }}</h2>
-<!--    <p>Пользователь: {{ user.username }}</p> -->
+    <p>Пользователь: {{ item.user_name }}</p>
     <p>{{ item.short_description }}</p>
     <p>{{ item.text }}</p>
     <p>{{ item.pub_date }}</p>
