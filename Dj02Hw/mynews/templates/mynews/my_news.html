@@ -6,15 +6,24 @@
 
 {% block content %}
 <h1>{{ page_title }}</h1>
+{% if news %}
 
-{% for item in news %}
-<div>
-    <h2>{{ item.title }}</h2>
-    <p>Пользователь: {{ item.user_name }}</p>
-    <p>{{ item.short_description }}</p>
-    <p>{{ item.text }}</p>
-    <p>{{ item.pub_date }}</p>
-</div>
-{% endfor %}
+    {% for item in news %}
+        <div class ="card" style = "width: 30rem;">
+            <div class="card-body">
+            <h5 class="card-title">{{ item.title }}</h5>
+                <p class ="card-text">Пользователь: {{ item.user_name }}</p>
+                <p class ="card-text">{{ item.short_description }}</p>
+                <a href = "#" class="btn btn-primary">Подробнее</a>
+            <!--<p>{{ item.text }}</p>
+                <p>{{ item.pub_date }}</p> -->
+            </div>
+        </div>
+    {% endfor %}
+
+{% else %}
+    <p>Новостей пока нет</p>
+{% endif %}
+
 
 {% endblock %}

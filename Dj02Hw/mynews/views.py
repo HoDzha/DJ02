@@ -6,3 +6,5 @@ def home(request):
     idata = {'page_title': 'Новости', 'name': 'Халил', 'news': news}
     return render(request, 'mynews/my_news.html', idata)
 
+def create_news(request):
+    return render(request, 'mynews/add_new_post.html')
