@@ -7,15 +7,44 @@
 {% block content %}
 <h1>{{ page_title }}</h1>
 
-<div>
-    <h3> Форма для добавления новостей</h3>
+    <div class="container my-5">
+        <div class="card shadow-lg">
+            <div class="card-header bg-primary text-white text-center">
+                <h3 class="mb-0">Форма для добавления новостей</h3>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
 
-    <form method="post">
-        <input type="text" name="title" placeholder="Название новости">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Добавить</button>
-    </form>
-</div>
+                        {{ form.title }}
+                    </div>
+
+                    <div class="form-group">
+
+                        {{ form.short_description }}
+                    </div>
+
+                    <div class="form-group">
+
+                        {{ form.text }}
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+
+                            {{ form.pub_date }}
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">Добавить новость</button>
+                </form>
+                <p>{{ error }}</p>
+
+            </div>
+        </div>
+    </div>
+
 
 {% endblock %}

@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+
 # Create your models here.
 class My_News_post(models.Model):
     user_name =  models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="Автор")
